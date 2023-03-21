@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans&family=Playfair+Display:ital@1&family=Raleway:ital,wght@1,100&family=Roboto:ital@1&family=Ubuntu&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>E-commerce website | Clone</title>
+</head>
+
+<body>
+    <header>
+        <!-- First head section start -->
+        <div class="head">
+            <div class="top">
+                <img src="./favicon.ico" alt="">
+                <p>Free Shipping for orders over 50$</p>
+            </div>
+            <div class="link">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help center</a></li>
+                <li><a href="#">Call us</a></li>
+            </div>
+        </div>
+        <!-- First head section start ends-->
+
+        <!-- Second head section start -->
+        <div class="second">
+            <div class="text">
+                <h1>TechShed</h1>
+                <input type="text" placeholder="search ...">
+                <img src="./magnifying-glass-solid.svg" alt="">
+            </div>
+            <div class="icons">
+                <img src="./user-solid.svg" alt="">
+                <p>Log in</p>
+                <img src="./heart-regular.svg" alt="">
+                <p>favourite</p>
+                <img src="./icons8-shopping-cart.gif" alt="">
+                <p>cart</p>
+            </div>
+        </div>
+        <!-- Second head section end -->
+
+        <!-- <div class="navbar">
+            <div class="nav">
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Computers</a></li>
+                <li><a href="#">Tablets</a></li>
+                <li><a href="#">Drones & Cameras</a></li>
+                <li><a href="#">Audio</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">T.V & Home Cinema</a></li>
+                <li><a href="#">Wearable Tech</a></li>
+                <li><a href="#">Sale</a></li>
+            </div>
+        </div> -->
+        
+        <!-- For responsiveness  -->
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Shop All</a>
+            <a href="#">Computers</a>
+            <a href="#">Tablets</a>
+            <a href="#">Audio</a>
+            <a href="#">Mobile</a>
+            <a href="#">T.V & Home Cinema</a>
+            <a href="#">Wearable Tech</a>
+            <a href="#">Sale</a>
+            <a href="#">Drones & Cameras</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+    </header>
+
+    <script>
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+    </script>
+</body>
+
+</html>
