@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Open+Sans&family=Playfair+Display:ital@1&family=Raleway:ital,wght@1,100&family=Roboto:ital@1&family=Ubuntu&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>E-commerce website | Clone</title>
 </head>
 
@@ -64,7 +64,7 @@
                 <li><a href="#">Sale</a></li>
             </div>
         </div> -->
-        
+
         <!-- For responsiveness  -->
         <div class="topnav" id="myTopnav">
             <a href="#" class="active">Shop All</a>
@@ -77,21 +77,44 @@
             <a href="#">Sale</a>
             <a href="#">Drones & Cameras</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
-          </div>
+        </div>
 
+        <!-- This is the code for hamburger menu 
+            &#9776; -->
+
+        <section id="display">
+            <div class="data">
+                <h5>Best Prices</h5>
+                <h1>Incredible Prices <br>On All Your <br>Favourite Items</h1>
+                <p>Get more for less on selected items</p>
+                <a href="#">Shop now</a>
+            </div>
+            <div class="button-head">
+
+            </div>
+        </section>
     </header>
+
+    <section id="products">
+        <div class="items">
+            <img src="./item1.webp" alt="">
+        </div>
+        <div class="items">
+            <img src="./item2.avif" alt="">
+        </div>
+    </section>
 
     <script>
         function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
     </script>
 </body>
 
