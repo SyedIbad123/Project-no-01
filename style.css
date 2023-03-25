@@ -6,6 +6,9 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+body{
+    /* background-color: rgb(205, 205, 205); */
+}
 .head {
     display: flex;
     height: 8vh;
@@ -13,9 +16,6 @@
     background-color: black;
     color: white;
     justify-content: space-between;
-}
-body{
-    background-color: rgb(236, 231, 227);
 }
 
 .top {
@@ -129,11 +129,6 @@ img {
 .topnav {
     background-color: rgb(215, 212, 209);
     overflow: hidden;
-    /* position: fixed; */
-    /* z-index: 1;
-    width: 100%; */
-    /* top:17vh; */
-    /* top: 17px; */
 }
 
 /* Style the links inside the navigation bar */
@@ -171,13 +166,13 @@ img {
     width: 100%;
     height: 75vh;
     background: transparent;
-    background-image: url(/1.jpg);
+    background-image: url(./images/1.jpg);
     background-position: center;
     background-size: cover;
     animation: change infinite 10s 4s ease-in;
-} 
+}
 
-.data{
+.data {
     width: 100%;
     text-align: left;
     position: relative;
@@ -185,26 +180,25 @@ img {
     transform: translateY(-50%);
     line-height: 32px;
     padding-left: 12px;
-    
 }
 
 
-.data h5{
+.data h5 {
     color: red;
     font-size: medium;
 }
 
-.data h1{
+.data h1 {
     font-size: 2rem;
     font-weight: 600;
 }
 
-.data p{
+.data p {
     font-size: small;
     margin-bottom: 12px;
 }
 
-.data a{
+.data a {
     border: 2px solid #202020;
     padding: 12px 18px;
     text-decoration: none;
@@ -213,27 +207,26 @@ img {
     border-radius: 23px;
 }
 
-.data a:hover{
+.data a:hover {
     background: transparent;
     color: rgb(59, 61, 188);
 }
 
 @keyframes change {
     0% {
-        background-image: url(/1.jpg) linear-gradient(left, from white to black);
+        background-image: url(./images/1.jpg);
         background-position: center;
         background-size: cover;
-
     }
 
     45% {
-        background-image: url(/2.webp);
+        background-image: url(./images/2.webp);
         background-position: center;
         background-size: cover;
     }
 
     85% {
-        background-image: url(/3.png);
+        background-image: url(./images/3.png);
         background-position: center;
         background-size: contain;
     }
@@ -243,33 +236,489 @@ img {
 
 /* Products section */
 
-#products{
+#products {
     width: 100%;
-    /* display: grid;
-    grid-template-columns: repeat(3,1fr); */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 12px;
+    gap: 32px;
+}
+
+.items {
+    width: 40vw;
+    height: 70vh;
+    margin-left: 24%;
+}
+
+.items img {
+    width: 40vw;
+    height: 70vh;
+}
+
+/* Section services */
+
+#services {
+    margin: 34px 0 32px 62px;
+    background-color: lightblue;
+    height: 220px;
+    width: 90%;
+}
+
+.service-data {
     display: flex;
-    margin-top: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-data img {
+    width: 200px;
+    height: 100px;
+    margin-top: 5%;
+    padding: 0 5%;
+}
+
+.service-data p {
+    margin-top: 6%;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Best sellers */
+
+#best-sellers {
+    height: 80vh;
+    width: 90%;
+    margin: 3% 5%;
+    /* background-color: #04AA6D; */
+}
+
+#best-sellers h1 {
+    text-align: center;
+    padding-top: 3%;
+    /* background-color: #04AA6D; */
+}
+
+.best-prod {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 2%;
+}
+
+.prod {
+    width: 200px;
+    height: 50vh;
+    /* background-color: rosybrown; */
+}
+
+.prod h5 {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.prod img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.5s;
+    background-color: white;
+    margin-bottom: 6%;
+}
+
+.button-prod {
+    width: 100%;
+    display: inline-block;
+    margin-left: 250%;
+}
+
+.button-prod button {
+    padding: 15px 70px;
+    border: 1px solid rgb(121, 49, 208);
+    border-radius: 34px;
+    cursor: pointer;
+    font-weight: 400;
+    background-color: rgb(121, 49, 208);
+    color: white;
+    overflow: hidden;
+}
+
+.button-prod button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+/* Shop by section */
+
+#shopby{
+    height: 90vh;
+    width: 90%;
+    margin: 3% 5%;
+    background-color: rgb(219, 231, 242);
+}
+
+.shop-products{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 2%;
+    gap: 12px;
     justify-items: center;
+}
+
+.shop-items{
+    width: 200px;
+    height: 35vh;
+    /* background-color: rgb(219, 231, 242); */
+    /* border: 1px solid #ddd; */
+    border-radius: 95px;
+    /* overflow: hidden; */
+    margin: 12px 0;
+}
+
+#shopby h1{
+    text-align: center;
+    padding-top: 12px;
+}
+.shop-items p{
+    text-align:center;
+}
+
+/* Saveup section starts here */
+
+#saveup{
+    margin: 12px 0 12px 76px;
+    width: 90%;
+    height: 60vh;
+    background: url(./images/save.webp);
     background-position: center;
     background-size: cover;
+}
+
+.save{
+    text-align: end;
     position: relative;
-    /* background-color: rgb(229, 216, 216); */
+    top: 10%;
+    margin-right: 10%;
+    font-size: 2rem;
+    color: black;
 }
 
-.items{
-    width: 43vw;
-    height: 75vh;
+.save h1{
+    font-size: 2em;
+    font-weight: 600;
+    padding: 18px 0;
+}
+
+.save h5{
+    font-weight: 200;
+    color: white;
+}
+
+.save p{
+    font-size: small;
+    color: red;
+}
+
+.save button{
+    margin: 12px 12px 0 0;
+    padding: 12px 46px;
+    font-size: 1rem;
+    background-color: rgb(76, 76, 229);
+    color: white;
+    border: none;
+    border-radius: 34px;
+}
+
+.save button:hover{
+    background-color:black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* On sale section */
+#Onsale{
+    height: 80vh;
+    width: 90%;
+    margin: 0 0 0 5%;
+    /* background-color: #04AA6D; */
+}
+
+#Onsale h1{
+    text-align: center;
+    padding-top: 16px;
+}
+
+.sale-prod{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 12px;
+}
+.sale-products{
+    width: 200px;
+    height: 50vh;
+    background-color: white;
+}
+
+.sale-products h5 {
+    font-size: 1em;
+}
+
+.sale-products img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: white;
+    margin-bottom: 6%;
+    
+}
+
+.button-sale {
+    width: 100%;
+    display: inline-block;
+    margin-left: 250%;
+}
+
+.button-sale button {
+    padding: 15px 70px;
+    border: 1px solid rgb(121, 49, 208);
+    border-radius: 34px;
+    cursor: pointer;
+    font-weight: 400;
+    background-color: rgb(121, 49, 208);
+    color: white;
+    overflow: hidden;
+}
+
+.button-sale button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+/* Save upto section */
+
+#saveupto{
+    margin: -34px 0 34px 76px;
+    width: 90%;
+    height: 60vh;
+    background: url(./images/tds.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.upto{
+    /* text-align: end; */
+    position: relative;
+    top: 10%;
+    margin-left: 10%;
+    font-size: 2rem;
+    color: white;
+}
+
+.upto h1{
+    font-size: 2em;
+    font-weight: 600;
+    padding: 18px 0;
+    color: rgb(17, 17, 85);
+}
+.upto h1 span{
+    color: black;
+}
+.upto h5{
+    font-weight: 200;
+    color: black;
+}
+
+.upto p{
+    font-size: small;
+    margin-top: 12px;
+}
+.upto button{
+    margin: 12px 12px 0 0;
+    padding: 12px 46px;
+    font-size: 1rem;
+    background-color: rgb(76, 76, 229);
+    color: white;
+    border: none;
+    border-radius: 34px;
+}
+
+.upto button:hover{
+    background-color:black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+/* Brands */
+#brands{
+    width: 90%;
+    height: 25vh;
+    /* background-color: aqua; */
+    
     margin-left: 5%;
-    
-    /* background-color: black; */
-    
-
 }
 
+.br{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: lightblue;
+}
 
-.items img{
-    width: 43vw;
-    height: 75vh;
+#brands h1{
+    text-align: center;
+    margin-bottom: 34px;
+}
+.brand{
+    margin: 12px 0 0 66px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 1px inset rgb(172, 165, 165);
+    text-decoration: overline;
+    background-color: rgb(154, 154, 184);
+    color: white;
+}
+
+/* Newsletter section */
+
+#newsletter{
+    width: 90%;
+    height: 40vh;
+    background-color: rgb(76, 76, 229);
+    margin: 5% 0 0 5%;
+}
+
+.news-data{
+    text-align: center;
+    position: relative;
+    top: 30%;
+}
+
+.news-data h1{
+    font-size: 2rem;
+    color: white;
+}
+
+.news-data p{
+    color: white;
+    font-weight: 100;
+}
+
+.news-data input{
+    padding: 12px 120px 10px 12px;
+    border-radius: 34px 34px 34px 34px;
+    border: none;
+}
+
+.news-data label{
+    margin-right: 30%;
+    color: white;
+}
+
+.news-data h1,p,input,label{
+    padding-bottom: 12px;
+}
+.news-data button{
+    padding: 12px 42px;
+    border-radius: 34px 34px 34px 34px;
+    margin-left: -34px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.news-data button:hover{
+    background-color: rgb(206, 125, 206);
+    color: black;
+    transition: 0.5s;
+    font-size: 0.8rem;
+}
+
+/* Help center section */
+
+#helpCenter{
+    margin: 12px 0 34px 63px;
+    width: 90%;
+    height: 60vh;
+    background: url(./images/help.webp);
+    background-position:right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.help{
+    text-align: center;
+    position: relative;
+    /* top: 10%; */
+    /* margin-left: 10%; */
+    font-size: 2rem;
+    color: white;
+    display: inline-block;
+    height: 60vh;
+    width: 45%;
+    background-color: black;
+}
+
+.help h1{
+    /* font-size: 2em; */
+    font-weight: 600;
+    padding: 18px 0;
+    color: white;
+}
+
+.help p{
+    font-size: small;
+    margin-top: 12px;
+}
+.help button{
+    margin: 12px 12px 0 0;
+    padding: 12px 46px;
+    font-size: 1rem;
+    background-color: rgb(76, 76, 229);
+    color: white;
+    border: none;
+    border-radius: 34px;
+}
+
+.help button:hover{
+    background-color:white;
+    transition: 0.5s;
+    cursor: pointer;
+    color: black;
+}
+
+/* Payment method */
+
+#payment{
+    width: 100%;
+    height: 20vh;
+    text-decoration: overline;
+}
+
+.methods{
+    
+    text-align: center;
+    padding: 12px;
+    font-weight: 100;
+}
+
+.methods img{
+    margin-top: 34px;
+    margin-right: 34px;
+}
+
+/* Footer */
+
+footer{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 12px;
+}
+
+footer p span{
+    text-decoration: underline;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -303,7 +752,8 @@ img {
     .second {
         overflow: hidden;
     }
-    .data{
+
+    .data {
         width: 100%;
         text-align: center;
         position: relative;
@@ -312,13 +762,80 @@ img {
         line-height: 32px;
         padding-left: 12px;
     }
-    .data h1,p{
+
+    .data h1,
+    p {
         color: white;
     }
-    .data a:hover{
+
+    .data a:hover {
         color: #04AA6D;
     }
+
+    /* Products section */
+
+    #products {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    .items {
+        width: 60vw;
+        height: 50vh;
+        /* padding-right: 92px; */
+        position: relative;
+        right: 110px;
+    }
+
+    .items img {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    /* Services */
+
+    #services {
+        margin: 34px 0 32px 0;
+        background-color: lightblue;
+        height: 200px;
+        width: 100%;
+    }
+
+    .service-data {
+        display: flex;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+
+    .service-data img {
+        width: 100px;
+        height: 50px;
+        /* margin-top: 5%; */
+        /* padding: 0 3%; */
+    }
+
+    .service-data p {
+        /* margin-top: 6%; */
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    /* Best Products */
+    .best-prod {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 2%;
+    }
 }
+
+@media (min-width:769px) and (max-width:1024px) {}
+
+@media (min-width:481px) and (max-width:768px) {}
+
+@media (min-width:320px) and (max-width: 480px) {}
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
@@ -338,231 +855,3 @@ img {
         text-align: left;
     }
 }
-
-.items h3{
-    width: 100%;
-    text-align: left;
-    position: relative;
-    top: 30%;
-    /* transform: translateY(-50%); */
-    /* line-height: 32px; */
-    padding-top: 100px;  
-    padding-left: 90px;
-    color: white;
-    font-size: 26px;
-    display: inline;
-}
-
-
-
-.sect{
-    background-color:rgb(221, 218, 215);
-    width: 100%;
-    height: 50vh;
-    margin-top: 100px;
-}
-
-.div1{
-    background-color: white;
-    width: 90%;
-    height: 30vh;
-    position: relative;
-    overflow: hidden;
-    left: 60px;
-    top: 70px;
-}
-
-.sect2{
-    background-color: #a99d9d;
-    width: 100%;
-    height: 150vh;
-    margin-top: 80px;
-}
-
-.div2{
-    background-color: #fff;
-    height: 100vh;
-    width: 90%;
-    position: relative;
-    left: 60px;
-    top: 100px;
-}
-
-.sect3{
-    background-color: #a99d9d;
-    height: 150vh;
-    width: 100%;
-    margin-top: 100px;
-}
-
-.div3{
-    background-color: white;
-    height: 100vh;
-    width: 90%;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect4{
-    background-color: #a99d9d;
-    height: 150vh;
-    width: 100%;
-    margin-top: 100px;
-
-}
-
-.div4{
-    background-color: white;
-    width: 90%;
-    height: 90vh;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect5{
-    background-color: #a99d9d;
-    height: 150vh;
-    width: 100%;
-    margin-top: 100px;
-
-}
-
-.div5{
-    background-color: white;
-    width: 90%;
-    height: 100vh;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect6{
-    background-color: #a99d9d;
-    height: 150vh;
-    width: 100%;
-    margin-top: 100px;
-
-}
-
-.div6{
-    background-color: white;
-    width: 90%;
-    height: 90vh;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect7{
-    background-color: #928b8b;
-    height: 100vh;
-    width: 100%;
-    margin-top: 100px;
-
-}
-
-.div7{
-    background-color: white;
-    width: 90%;
-    height: 50vh;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect7{
-    background-color: #928b8b;
-    height: 100vh;
-    width: 100%;
-    margin-top: 100px;
-
-}
-
-.div7{
-    background-color: rgb(89, 29, 174);
-    width: 90%;
-    height: 50vh;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect8{
-    background-color: #928b8b;
-    height: 130vh;
-    width: 100%;
-    margin-top: 100px;
-
-}
-
-.div8{
-    background-color: rgb(255, 255, 255);
-    width: 90%;
-    height: 80vh;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect9{
-    background-color: #928b8b;
-    height: 130vh;
-    width: 100%;
-    margin-top: 100px;
-
-}
-
-.div9{
-    background-color: rgb(255, 255, 255);
-    width: 90%;
-    height: 80vh;
-    position: relative;
-    left: 60px;
-    top: 150px;
-    display: flex;
-}
-
-.sect10{
-    background-color: #928b8b;
-    height: 130vh;
-    width: 100%;
-    /* margin-top: 100px; */
-
-}
-
-.div10{
-    background-color: rgb(252, 252, 252);
-    width: 90%;
-    height: 80vh;
-    position: relative;
-    left: 60px;
-    top: 0;
-    display: flex;
-}
-
-.div11{
-    background-color: black;
-    height: 10vh;
-    width: 100%;
-    position: relative;
-    margin-top: 560px;
-}
-
-.div11 p{
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    /* font-size: 20px; */
-    /* padding-top: 100px; */
-}
-
