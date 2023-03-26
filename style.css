@@ -5,9 +5,12 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
-body {
+
+
+/* body {
     overflow-x: hidden;
-  }
+    max-width: 100%;
+  } */
 
 
 
@@ -110,7 +113,7 @@ img {
 }
 
 .icons {
-    margin-right: 12px;
+    margin-right: 10px;
     display: flex;
 }
 
@@ -196,6 +199,7 @@ img {
 
 .topnav .icon {
     display: none;
+    /* visibility: hidden;*/ 
 }
 
 
@@ -479,14 +483,14 @@ font-size: 15px;
 .service-data img {
     width: 200px;
     height: 100px;
-    margin-top: 5%;
+    margin-top: 4%;
     padding: 0 4%;
     border-radius:100%;
     
 }
 
 .service-data p {
-    margin-top: 7%;
+    margin-top: 6%;
     font-weight: bold;
     font-size: 1em;
     color: rgb(255, 255, 255);
@@ -608,6 +612,7 @@ font-size: 15px;
     text-align: center;
     padding-top: 30px;
 }
+
 .shop-items p{
     text-align:center;
     font-weight: bolder;
@@ -674,6 +679,7 @@ font-size: 15px;
 
 
 #Onsale{
+    /* background-color: black; */
     height: 80vh;
     width: 90%;
     margin: 70px 0 4% 5%;
@@ -688,16 +694,18 @@ font-size: 15px;
 }
 
 .sale-prod{
+    /* background-color: #0000; */
     display: grid;
     grid-template-columns: repeat(6,1fr);
     gap: 12px;
+
 }
 
 
 .sale-products{
     width: 200px;
     height: 50vh;
-    background-color: white;
+    background-color:white;
 }
 
 .sale-products h5 {
@@ -1027,6 +1035,8 @@ footer{
     text-align: center;
     padding: 12px 0;
     margin-top: 12px;
+    /* width: 100%;
+    height: 50%; */
     color: rgb(0, 0, 0);
 }
 
@@ -1037,7 +1047,35 @@ footer p span{
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 
-@media screen and (max-width: 600px) {
+@media (min-width:320px) and (max-width: 481px) {
+
+   
+
+    html,body {
+
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        /* margin-right: 0; */
+    
+      }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+
+    .main{
+        max-width: 100%;
+
+    }
+
+    /* navbar */
+
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -1052,20 +1090,39 @@ footer p span{
         /* height: 10vh; */
     }
 
+    .icons{
+            margin-top: 23px;
+            margin-right: 10px;
+            display: flex;
+
+            padding: 10px;
+    }
+
+    /* .second{
+        /* display: flex;
+        justify-content: space-between;
+    } */ 
+
     .link {
         /* position: absolute;
         /* top: 0; 
         right: 0; */
+        /* padding: 100px; */
         display: none;
     }
 
     .top {
         position: relative;
-        top: 18px;
+        top: 1px;
     }
 
     .second {
         overflow: hidden;
+    }
+
+    .text input{
+        margin-left: 23px;
+        padding-left: 10px;
     }
 
     .data {
@@ -1087,6 +1144,7 @@ footer p span{
         color: #04AA6D;
     }
 
+
     /* Products section */
 
     #products{
@@ -1099,6 +1157,8 @@ footer p span{
         background-position: center;
         background-size: cover;
         position: relative;
+        max-width: 100%;
+        /* background-color: black; */
         /* background-color: rgb(229, 216, 216); */
     }
     
@@ -1113,6 +1173,7 @@ footer p span{
         /* background-color: black; */
         margin-bottom: 50px;
         margin-left: 0;
+        /* background-color: black; */
         /* margin-right: 1px; */
 
     
@@ -1122,7 +1183,7 @@ footer p span{
     .items .p1{
         position: absolute;
         padding-bottom:8%;
-        top: 30%;
+        top: 20%;
         left: 18.5%;
         transform: translate(-50%, -50%);
         color: white;
@@ -1134,7 +1195,7 @@ footer p span{
     .p2{
         position: absolute;
         top: 52%;
-        left: 29%;
+        left: 35%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 1em;
@@ -1144,8 +1205,8 @@ footer p span{
     
     .btn1{
         position: absolute;
-        top: 67%;
-        left: 22%;
+        top: 68%;
+        left: 25%;
         transform: translate(-50%, -50%);
         color: rgb(0, 0, 0);
         background-color: rgb(0, 0, 0);
@@ -1175,8 +1236,8 @@ footer p span{
     
     .items h2{
         position: absolute;
-        top: 40%;
-        left: 25.1%;
+        top: 35%;
+        left: 28.7%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 3em;
@@ -1186,7 +1247,7 @@ footer p span{
     
     .items .h2{
         position: absolute;
-        top: 40%;
+        top: 37%;
         left: 40%;
         transform: translate(-50%, -50%);
         color: rgb(255, 255, 255);
@@ -1199,7 +1260,7 @@ footer p span{
     .p3{
         position: absolute;
         top: 13%;
-        left: 19%;
+        left: 22%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 2em;
@@ -1210,8 +1271,8 @@ footer p span{
     
     .p4{
         position: absolute;
-        top: 57%;
-        left: 25.6%;
+        top: 53%;
+        left: 31.4%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 1em;
@@ -1222,8 +1283,8 @@ footer p span{
     
     .btn2{
         position: absolute;
-        top: 71%;
-        left: 22%;
+        top: 65%;
+        left: 27%;
         transform: translate(-50%, -50%);
         color: rgb(0, 0, 0);
         background-color: rgb(0, 0, 0);
@@ -1269,10 +1330,14 @@ footer p span{
         margin: 34px 10px 32px 10px;
         background-color: rgb(85, 0, 0);
         padding-top: 100px;
+        margin-left: 100px;
+        /* padding-left: 100px; */
         width: 50%;
         height: 1000px;
-        left:25%;
+        /* left:25%; */
         position: relative;
+        max-width: 100%;
+        /* background-color: black; */
         
     }
 
@@ -1281,6 +1346,7 @@ footer p span{
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        /* background-color: black; */
 
         /* flex-wrap: wrap; */
     }
@@ -1288,6 +1354,10 @@ footer p span{
     .service-data img {
         width: 100px;
         height: 70px;
+        align-items: center;
+        /* margin-left: 5px; */
+        /* z-index: 20; */
+
         /* margin-top: 5%; */
         /* padding: 0 3%; */
     }
@@ -1300,15 +1370,19 @@ footer p span{
         margin-bottom: 60px;
     }
 
+
+
     /* best sellers */
 
     #best-sellers{
         /* background-color: rgb(254, 254, 254); */
         width: 100%;
-        height: 390vh;
+        height: 410vh;
         margin-left: 0;
         margin-top: 100px;
         margin-bottom: 100px;
+        /* background-color:black; */
+        max-width: 100%;
     }
 
     .best-prod{
@@ -1352,9 +1426,10 @@ footer p span{
     }
 
     .button-prod{
-        margin-top: 30px;
-        margin-left: 370px;
-        align-items: center;
+        /* margin-top: 1px; */
+        /* right: 50%; */
+        margin-left: 55%;
+        align-items: left;
     }
 
     .button-prod button{
@@ -1364,14 +1439,16 @@ footer p span{
     }
 
 
-
+    /* shopby section */
 
     #shopby{
         width: 100%;
         margin-left: 0;
         padding-top: 30px;
-        height: 500vh;
+        height: 480vh;
         background-color: #5442dc;
+        max-width: 100%;
+        margin-bottom: 100px;
     }
 
     .shop-products{
@@ -1406,13 +1483,15 @@ footer p span{
     }
 
 
+    /* saveupto section */
 
 
     #saveup{
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         width: 100%;
         margin-left: 0;
         height: 70vh;
+        max-width: 100%;
 
     }
 
@@ -1444,42 +1523,61 @@ footer p span{
     }
 
 
-
+    /* onsale section */
 
 
     #Onsale{
 
         /* background-color: black; */
         width: 100%;
+        /* margin-left: 1000px; 
+        */
+        left: -25%;
         margin-left: 0;
-        height: 440vh;
+        height: 380vh;
+        max-width: 100%;
+        position: relative;
+        /* text-align: center; */
+        
 
 
     }
 
 
     .sale-prod{
-
         display: flex;
         flex-direction: column;
         align-items: center;
+        /* left: 25%; */
+        margin-left: 50%;
+        /* margin-bottom: 100px; */
 
     }
 
-    .sale-products{
-        margin-bottom: 100px;
+    #Onsale h1{
+        /* text-align: center;
+        left: 25%; */
+        margin-left: 50%;
+        /* position: relative; */
+    } 
 
+    .sale-products{
+        margin-bottom: 10px;
     }
 
     .sale-products h5{
         text-align: center;
+        /* margin-left: 50%; */
 
     }
 
     .button-sale {
-        margin-top: -50px;
-        margin-left: 370px;
+        margin-top: 80px;
+        margin-left:10%;
         align-items: center;
+
+        /* justify-content: center; */
+        
 
     }
 
@@ -1488,11 +1586,13 @@ footer p span{
     }
 
 
-
+    /* saveupto2 section */
 
     #saveupto{
         width: 100%;
         margin-left: 0;
+        /* background-color: black; */
+        max-width: 100%;
 
     }
 
@@ -1513,11 +1613,12 @@ footer p span{
     }
 
     
+    /* brands */
+
+
     #brands{
-        height: 145vh;
-
-
-
+        height: 128vh;
+        max-width: 100%;
     }
 
 
@@ -1532,7 +1633,6 @@ footer p span{
         flex-direction: column;
         /* justify-content: center; */
         align-items: center;
-  
     
 
     }
@@ -1546,13 +1646,14 @@ footer p span{
     }
 
 
-
+    /* newsletter section */
 
     #newsletter{
         width:100%;
         margin-left: 0;
         height: 60vh;
-
+        /* background-color: black; */
+        max-width: 100%;
     }
 
 
@@ -1564,28 +1665,44 @@ footer p span{
         padding-bottom: 50px;
     }
 
+    .news-data p{
+        margin-left: 10px;
+    }
+
     .news-data label{
-        margin-left: -241px;
+        margin-left: -130px;
+    }
+
+    .news-data input{
+        margin-bottom: 15px;
+    }
+
+    .news-data button{
+        margin-left: 10px;
     }
 
 
+    /* helpcenter */
 
     #helpCenter{
         width: 100%;
-        height: 60vh;
+        height: 70vh;
         margin-top: 100px;
+        /* background-color: red; */
+        max-width: 100%;
 
     }
 
     .help{
         width: 100%;
-        padding-top: 40px;
+        padding-top: 10px;
+        height: 70vh;
 
 
     }
 
     #payment{
-        height: 30vh;
+        height: 50vh;
         align-items: center;
 
 
@@ -1603,22 +1720,36 @@ footer p span{
 
     .methods h6{
         text-align:center ;
-        margin-left: -100px;
+        margin-left: -60px;
+        margin-right: 20px;
     }
-
-
-
-
-
-
-
-
-
-
 }
 
+
+
+
 @media (min-width:769px) and (max-width:1024px) {
+
+
+    html,body {
+
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        /* margin-right: 0; */
     
+      }
+
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+
     /* Products */
 
     #products{
@@ -1655,18 +1786,18 @@ footer p span{
         position: absolute;
         padding-bottom:10%;
         top: 30%;
-        left: 18.5%;
+        left: 8.5%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 1em;
-        text-align: center;
+        /* text-align: center; */
         
     }
     
     .p2{
         position: absolute;
-        top: 52%;
-        left: 29%;
+        top: 46%;
+        left: 16%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 1em;
@@ -1676,8 +1807,8 @@ footer p span{
     
     .btn1{
         position: absolute;
-        top: 67%;
-        left: 22%;
+        top: 57%;
+        left: 11%;
         transform: translate(-50%, -50%);
         color: rgb(0, 0, 0);
         background-color: rgb(0, 0, 0);
@@ -1707,23 +1838,23 @@ footer p span{
     
     .items h2{
         position: absolute;
-        top: 40%;
-        left: 25.1%;
+        top: 37%;
+        left: 13.1%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 3em;
-        text-align: center;
+        text-align: left;
         
     }
     
     .items .h2{
         position: absolute;
-        top: 40%;
-        left: 40%;
+        top: 30%;
+        left: 36%;
         transform: translate(-50%, -50%);
         color: rgb(255, 255, 255);
         font-size: 3em;
-        text-align: center;
+        /* text-align: center; */
         text-shadow: 3px 4px 5px black;
         padding-top: 4%;
     }
@@ -1731,19 +1862,19 @@ footer p span{
     .p3{
         position: absolute;
         top: 13%;
-        left: 19%;
+        left: 10%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 2em;
-        text-align: center;
+        /* text-align: center; */
         padding-top: 10%;
         text-shadow: 3px 4px 5px black;
     }
     
     .p4{
         position: absolute;
-        top: 57%;
-        left: 25.6%;
+        top: 37%;
+        left: 14%;
         transform: translate(-50%, -50%);
         color: white;
         font-size: 1em;
@@ -1754,8 +1885,8 @@ footer p span{
     
     .btn2{
         position: absolute;
-        top: 71%;
-        left: 22%;
+        top: 51%;
+        left: 12%;
         transform: translate(-50%, -50%);
         color: rgb(0, 0, 0);
         background-color: rgb(0, 0, 0);
@@ -1793,16 +1924,19 @@ footer p span{
     /* Services */
 
     #services {
-        margin: 4% 0 2% 1%;
+        margin: 4% 0 2% 4%;
         background-color: rgb(85, 0, 0);
         height: 20vh;
-        width: 75%;
+        width: 90%;
         border-radius: 100px;
         box-shadow: -5px -5px 4px black;
         border: 1px inset white;
     }
     
     .service-data {
+        margin-top: 30px;
+        /* padding-right: 100px; */
+        overflow-x: hidden;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -1814,6 +1948,10 @@ footer p span{
         height: 100px;
         margin-top: 5%;
         padding: 0 1%;
+        margin-right: 20px;
+        margin-left: 20px;
+        /* padding-left: 0;
+        padding-right: 2%; */
         border-radius:100%;
         
     }
@@ -1829,9 +1967,9 @@ footer p span{
     /* Best sellers */
 
     #best-sellers {
-        height: 80vh;
+        height: 100vh;
         width: 80%;
-        margin: 3% 5% 35% 10%;
+        margin: 10% 5% 10% 10%;
         /* background-color: red; */
         /* background-color: red; */
     }
@@ -1845,13 +1983,13 @@ footer p span{
     .best-prod {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-top: 2%;
+        margin-top: 1%;
         /* background-color: black; */
     }
     
     .prod {
         width: 200px;
-        height: 50vh;
+        height: 40vh;
         /* background-color: rosybrown; */
     }
     
@@ -1887,7 +2025,8 @@ footer p span{
         font-weight: 400;
         background-color: rgb(121, 49, 208);
         color: rgb(255, 255, 255);
-        overflow: hidden;
+        overflow-x: hidden;
+        margin-left: -20%;
     }
     
     .button-prod button:hover {
@@ -1899,9 +2038,9 @@ footer p span{
     /* SHop by */
 
     #shopby{
-        height: 166vh;
+        height: 95vh;
         width: 90%;
-        margin: 2% 5%;
+        margin: 2% 1%;
         /* background-color: rgb(219, 231, 242); */
     }
     
@@ -1909,16 +2048,18 @@ footer p span{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-top: 6%;
+        margin-left: 5%;
         /* margin-bottom: 40%; */
         gap: 8px;
         justify-items: center;
+        align-items: center;
 
     
     }
     
     .shop-items img{
         width: 150px;
-        height: 23vh;
+        height: 13vh;
         /* background-color: rgb(219, 231, 242); */
         /* border: 1px solid #ddd; */
         border-radius: 110px;
@@ -1936,22 +2077,34 @@ footer p span{
         text-align: center;
         padding-top: 30px;
     }
+
     .shop-items p{
         text-align:center;
         font-weight: bolder;
     }
     
+
+    #saveup{
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+
+
+
+
     /* On sale */
 
     #Onsale{
-        height: 80vh;
+        height: 90vh;
         width: 90%;
-        margin: 70px 0 50% 10%;
+        margin: 100px 0 1% 10%;
         /* background-color: #04AA6D; */
     }
     
     #Onsale h1{
         text-align: center;
+        margin-left: -10%;
         padding-top: 16px;
         padding-bottom: 40px;
         font-size: 35px;
@@ -1966,7 +2119,7 @@ footer p span{
     
     .sale-products{
         width: 200px;
-        height: 50vh;
+        height: 30vh;
         background-color: white;
     }
     
@@ -1987,7 +2140,7 @@ footer p span{
     .button-sale {
         width: 100%;
         display: inline-block;
-        margin-left: 120%;
+        margin-left: 100%;
         margin-top: 8%;
     }
     
@@ -2004,6 +2157,11 @@ footer p span{
         overflow: hidden;
     }
     
+    #saveupto{
+        width: 100%;
+        margin-left: 0;
+        /* margin-right: 0; */
+    }
     
     
     .button-sale button:hover {
@@ -2016,10 +2174,10 @@ footer p span{
 
     #brands{
         width: 90%;
-        height: 50vh;
+        height: 40vh;
         /* background-color: aqua; */
         
-        margin-left: 5%;
+        margin-left: 1%;
     }
     
     .br{
@@ -2030,13 +2188,29 @@ footer p span{
         justify-items: center;
         /* position: relative; */
     }
-    
-    #brands h1{
-        text-align: center;
-        margin-bottom: 34px;
+
+    .item4{
+        /* -left: 100px; */
+        top: 20%;
+        left: 125px;
+        position: relative;
+    }
+
+    .item5{
+        top: 20%;
+        left: 125px;
+        position: relative;
     }
     
-    
+
+    /* brands */
+
+
+    #brands h1{
+        text-align: center;
+        margin-left: 70px;
+        margin-bottom: 104px;
+    }
     
     
     .brand{
@@ -2060,13 +2234,19 @@ footer p span{
         /* transition: 1s; */
     }
 
+
+    /* help */
+
+    .help{
+        margin-top: 10%;
+        height: 40vh;
+    }
+
     /* Payments */
 
     #payment{
         height: 40vh;
         align-items: center;
-
-
     }
 
     .methods{
@@ -2084,10 +2264,55 @@ footer p span{
         margin-left: -100px;
     }
 
+    /* footer{
+        width: 100%;
+    } */
     
 }
 
 @media (min-width:481px) and (max-width:768px) {
+
+    html,body {
+
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        /* margin-right: 0; */
+    
+      }
+
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+    /* .icons{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 102px;
+    }
+
+    .icon2{
+        visibility: hidden;
+    }
+
+    .para2{
+        visibility: hidden;
+    }
+
+    .icon3,.para3{
+        visibility: hidden;
+    }
+
+    .link4{
+        /* visibility: hidden; */
+        /* display: none; */
+    /* }  */
 
     /* Products */
 
@@ -2441,6 +2666,17 @@ footer p span{
         margin-left: 80px;
     }
 
+
+    #saveup{
+        width: 100%;
+        margin-left: 0;left: 0;
+    }
+
+    #saveupto{
+        width: 100%;
+        margin-left: 0;left: 0;
+    }
+
     /* Brands */
 
     #brands{
@@ -2498,7 +2734,7 @@ footer p span{
 
 }
 
-@media (min-width:320px) and (max-width: 480px) {}
+
 
 
 
